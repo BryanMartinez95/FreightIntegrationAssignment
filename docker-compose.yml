@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  canpar-api:
+    image: canpar-api:latest
+    container_name: canpar-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    build:
+      context: .
+      dockerfile: ./CanparAPI/Dockerfile
+    ports:
+      - "7011:80" #the app starts on port 80 by default
+
+  fedex-api:
+    image: fedex-api:latest
+    container_name: fedex-api
+    environment:
+      FLASK_ENV: development
+      APPSETTING_WEBSITES_PORT: 7012
+    build:
+      context: .
+      dockerfile: ./FedexAPI/Dockerfile
+    ports:
+      - "7012:80" #the app is set to start on port 7012
+
+  purolator-api:
+    image: purolator-api:latest
+    container_name: purolator-api
+    environment:
+      APPSETTING_WEBSITES_PORT: 7013
+      FLASK_ENV: development
+    build:
+      context: .
+      dockerfile: ./PurolatorAPI/Dockerfile
+    ports:
+      - "7013:80" #the app is set to start on port 7013

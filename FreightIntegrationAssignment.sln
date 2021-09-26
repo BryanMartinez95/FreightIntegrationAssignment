@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanparAPI", "CanparAPI\CanparAPI.csproj", "{7C533A32-8062-43E0-A5F9-5AB240679E62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FedexAPI", "FedexAPI\FedexAPI.csproj", "{2332F81B-517A-48B6-A9BB-C232C93E1627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurolatorAPI", "PurolatorAPI\PurolatorAPI.csproj", "{9F14CA87-5D8C-439E-8688-544D71EAFC79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C533A32-8062-43E0-A5F9-5AB240679E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C533A32-8062-43E0-A5F9-5AB240679E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C533A32-8062-43E0-A5F9-5AB240679E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C533A32-8062-43E0-A5F9-5AB240679E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2332F81B-517A-48B6-A9BB-C232C93E1627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2332F81B-517A-48B6-A9BB-C232C93E1627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2332F81B-517A-48B6-A9BB-C232C93E1627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2332F81B-517A-48B6-A9BB-C232C93E1627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F14CA87-5D8C-439E-8688-544D71EAFC79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F14CA87-5D8C-439E-8688-544D71EAFC79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F14CA87-5D8C-439E-8688-544D71EAFC79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F14CA87-5D8C-439E-8688-544D71EAFC79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
