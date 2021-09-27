@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PurolatorAPI.Models;
+using PurolatorAPI.Services;
 
 namespace PurolatorAPI.Controllers
 {
@@ -7,13 +8,19 @@ namespace PurolatorAPI.Controllers
     [Route("[controller]")]
     public class QuoteController : Controller
     {
-        [HttpPost]
-        public RateModel Quote(QuoteModel quoteModel)
+        private readonly IRateService _rateService;
+        public QuoteController(IRateService rateService)
         {
-            return new RateModel
-            {
-                Total = 12
-            };
+            _rateService = rateService;
+        }
+        
+        [HttpPost]
+        [Route("TransportationCost")]
+        public IActionResult TransportationCost(QuoteModel quoteModel)
+        {
+            var rate = _rateService.CalculateRate(quoteModel);
+            
+            return Ok(rate);
         }
     }
     

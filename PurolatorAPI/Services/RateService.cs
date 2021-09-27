@@ -1,6 +1,6 @@
-﻿using CanparAPI.Models;
+﻿using PurolatorAPI.Models;
 
-namespace CanparAPI.Services
+namespace PurolatorAPI.Services
 {
     public class RateService : IRateService
     {
@@ -8,10 +8,9 @@ namespace CanparAPI.Services
         {
             var rateModel = new RateModel
             {
-                Quote = 10 * quoteModel.Packages.Count
+                Total = 5 + (10 * quoteModel.PackageDimensions.Count)
             };
             return rateModel;
-            
         }
     }
 }

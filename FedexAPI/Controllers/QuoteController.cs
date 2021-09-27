@@ -1,4 +1,5 @@
 ﻿using FedexAPI.Models;
+using FedexAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FedexAPI.Controllers
@@ -7,13 +8,18 @@ namespace FedexAPI.Controllers
     [Route("[controller]")]
     public class QuoteController : Controller
     {
-        [HttpPost]
-        public RateModel Quote(QuoteModel quoteModel)
+        private readonly IRateService _rateService;
+        public QuoteController(IRateService rateService)
         {
-            return new RateModel
-            {
-                Amount = 33
-            };
+            _rateService = rateService;
+        }
+        
+        [HttpPost]
+        [Route("ShippingQuote")]
+        public IActionResult ShippingQuote(QuoteModel quoteModel)
+        {
+            var rate = _rateService.CalculateRate(quoteModel);
+            return Ok(rate);
         }
     }
 }

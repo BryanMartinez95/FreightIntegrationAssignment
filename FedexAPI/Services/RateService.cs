@@ -1,6 +1,6 @@
-﻿using CanparAPI.Models;
+﻿using FedexAPI.Models;
 
-namespace CanparAPI.Services
+namespace FedexAPI.Services
 {
     public class RateService : IRateService
     {
@@ -8,10 +8,9 @@ namespace CanparAPI.Services
         {
             var rateModel = new RateModel
             {
-                Quote = 10 * quoteModel.Packages.Count
+                Amount = 30 + (5 * quoteModel.Cartons.Count)
             };
             return rateModel;
-            
         }
     }
 }
