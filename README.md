@@ -2,6 +2,8 @@
 An external API project made for Cymax Assignment. This project mocks shipping companies API's in order for [Freight Assignment](https://github.com/BryanMartinez95/FreightAssignment)
 to consume
 
+This project creates 3 seperate API's seperated as microservices using docker. 
+
 ## Prerequisites
 Install NET Core SDK https://dotnet.microsoft.com/download
 
