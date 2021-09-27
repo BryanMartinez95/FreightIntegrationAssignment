@@ -11,8 +11,6 @@ Install Docker https://www.docker.com/products/docker-desktop
 
 Access Locally `http://localhost:7011` (Canpar), `http://localhost:7012` (Fedex), `http://localhost:7013` (Purolator)
 
-## Deployment
-Application is currently deployed on Azure App Services: https://contentslimitinsurance20200803193134.azurewebsites.net
 ## Built With
 - [ASP.NET Core 5.0](https://dotnet.microsoft.com/download/dotnet/5.0) Back End API
 - [Swagger](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) API Documentation/Testing
