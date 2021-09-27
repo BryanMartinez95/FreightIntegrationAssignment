@@ -7,19 +7,16 @@ namespace CanparAPI.Controllers
     [Route("[controller]")]
     public class QuoteController : Controller
     {
-        [HttpGet]
+        [HttpPost]
         [Consumes("application/xml")]
-        public RateModel Quote()
+        [Produces("application/xml")]
+        public IActionResult Quote(QuoteModel quoteModel)
         {
-            return new RateModel
+            var model = new RateModel
             {
-                Quote = 10
+                Quote = 10,
             };
+            return Ok(model);
         }
-    }
-
-    public class QuoteResponse
-    {
-        public double Amount { get; set; }
     }
 }

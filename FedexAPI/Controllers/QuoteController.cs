@@ -7,8 +7,8 @@ namespace FedexAPI.Controllers
     [Route("[controller]")]
     public class QuoteController : Controller
     {
-        [HttpGet]
-        public RateModel Quote()
+        [HttpPost]
+        public RateModel Quote(QuoteModel quoteModel)
         {
             return new RateModel
             {
