@@ -1,4 +1,4 @@
-# FreightIntegrationAssignment
+# Freight Integration Assignment
 An external API project made for Cymax Assignment. This project mocks shipping companies API's in order for [Freight Assignment](https://github.com/BryanMartinez95/FreightAssignment)
 to consume
 
